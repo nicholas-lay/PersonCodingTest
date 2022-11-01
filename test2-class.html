@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>test2</title>
+    </head>
+    <body>
+        <script>
+            class Person {
+                constructor(name, age) {
+                    this["name"] = name;
+                    this["age"] = age;
+                }
+                sayHi() {
+                    console.log("你好，我叫 " + this["name"]);
+                }
+            }
+            let person = newPerson("frank", 18);
+            person["name"] === "frank";
+            person["age"] === 18;
+            person.sayHi();
+            let person2 = newPerson("jack", 19);
+            person2.name === "jack";
+            person2.age === 19;
+            person2.sayHi();
+        </script>
+    </body>
+</html>
